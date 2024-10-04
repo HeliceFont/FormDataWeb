@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Desarrollo de Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .optional {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario para Desarrollo de Página Web</h1>
+
+    <div class="form-container">
+        <form 
+        action="https://formspree.io/f/xqakzeoa"
+        method="POST">
+            <!-- Información General -->
+            <label for="nombre">Nombre de la Empresa:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="contacto">Persona de Contacto:</label>
+            <input type="text" id="contacto" name="contacto" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono">
+
+            <label for="sector">Sector de la Empresa:</label>
+            <input type="text" id="sector" name="sector">
+
+            <label for="sitio-actual">¿Tiene una página web actualmente?</label>
+            <select id="sitio-actual" name="sitio_actual">
+                <option value="No">No</option>
+                <option value="Sí">Sí</option>
+            </select>
+
+            <label for="url">Si la respuesta es "Sí", proporcione la URL:</label>
+            <input type="text" id="url" name="url">
+
+            <!-- Objetivos del Proyecto -->
+            <label for="objetivo">¿Cuál es el principal objetivo de la nueva página web?</label>
+            <select id="objetivo" name="objetivo" required>
+                <option value="Informativa">Informativa</option>
+                <option value="Ventas en línea">Ventas en línea</option>
+                <option value="Generación de leads">Generación de leads</option>
+                <option value="Plataforma interactiva">Plataforma interactiva</option>
+                <option value="Blog/Noticias">Blog/Noticias</option>
+                <option value="Otro">Otro (Especifique):</option>
+            </select>
+            <textarea id="otro-objetivo" name="otro_objetivo" placeholder="Especificar si es necesario"></textarea>
+
+            <!-- Funcionalidades Necesarias -->
+            <label for="funcionalidades">¿Qué tipo de funcionalidades necesita?</label>
+            <select multiple id="funcionalidades" name="funcionalidades[]" required>
+                <option value="Catálogo de productos/servicios">Catálogo de productos/servicios</option>
+                <option value="Carrito de compras y pasarela de pago">Carrito de compras y pasarela de pago</option>
+                <option value="Formulario de contacto">Formulario de contacto</option>
+                <option value="Chat en vivo">Chat en vivo</option>
+                <option value="Registro de usuarios">Registro de usuarios</option>
+                <option value="Blog/Noticias">Blog/Noticias</option>
+                <option value="Sistema de reservas">Sistema de reservas</option>
+                <option value="Galería de imágenes/vídeos">Galería de imágenes/vídeos</option>
+                <option value="Otro">Otro (Especifique):</option>
+            </select>
+            <textarea id="otra-funcionalidad" name="otra_funcionalidad" placeholder="Especificar si es necesario"></textarea>
+
+            <!-- Diseño y Estilo -->
+            <label for="diseno">¿Tiene alguna preferencia de diseño o referencia de sitios que le gusten?</label>
+            <textarea id="diseno" name="diseno"></textarea>
+
+            <label for="soporte-diseno">¿Necesita soporte para diseño gráfico adicional?</label>
+            <select id="soporte-diseno" name="soporte_diseno">
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <!-- Contenidos -->
+            <label for="contenido">¿Ya tiene todos los textos e imágenes necesarios?</label>
+            <select id="contenido" name="contenido">
+                <option value="Sí">Sí</option>
+                <option value="No, necesitamos textos">No, necesitamos textos</option>
+                <option value="No, necesitamos imágenes">No, necesitamos imágenes</option>
+                <option value="No, necesitamos ambos">No, necesitamos ambos</option>
+            </select>
+
+            <!-- Tiempo y Presupuesto -->
+            <label for="tiempo">¿Cuál es su plazo deseado para la entrega?</label>
+            <select id="tiempo" name="tiempo">
+                <option value="Menos de 1 mes">Menos de 1 mes</option>
+                <option value="1-3 meses">1-3 meses</option>
+                <option value="Más de 3 meses">Más de 3 meses</option>
+            </select>
+
+            <label for="presupuesto">¿Tiene un presupuesto estimado?</label>
+            <select id="presupuesto" name="presupuesto">
+                <option value="Menos de 1000€">Menos de 1000€</option>
+                <option value="1000€ - 3000€">1000€ - 3000€</option>
+                <option value="Más de 3000€">Más de 3000€</option>
+                <option value="No estoy seguro">No estoy seguro</option>
+            </select>
+
+            <!-- Comentarios Adicionales -->
+            <label for="comentarios">Comentarios Adicionales:</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+
+            <!-- Submit -->
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+</body>
+</html>
